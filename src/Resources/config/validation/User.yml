@@ -1,0 +1,8 @@
+App\Entity\User:
+    properties:
+        name:
+            - NotBlank:
+                message: "The value cannot be empty"
+            - Length:
+                max: 250
+                maxMessage: "The value cannot be longer than"

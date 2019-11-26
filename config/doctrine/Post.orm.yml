@@ -1,0 +1,17 @@
+App\Entity\Post:
+  type: entity
+  table: api_post
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    description:
+      type: string
+    dateTime:
+      type: datetime
+  manyToOne:
+    userPost:
+      targetEntity: App\Entity\User
+      inversedBy: post
